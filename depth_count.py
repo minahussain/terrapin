@@ -29,15 +29,15 @@ for line in hdr.xreadlines():
 
 		# compare to total and add to its respective tally
 		if count == total:
-			full = full + 1
+			full += 1
 		elif count == 1:
-			one = one + 1
+			one += 1
 		elif count + total == 2*total:
-			half = half + 1
+			half += 1
 		elif count == 0:
-			none = none + 1
+			none += 1
 		else:
-			other = other + 1
+			other += 1
 
 print full, one, half, none, other
 f1.write("\n%d\t%d\t%d\t%d\t%d\n" %(full, one, half, none, other))
