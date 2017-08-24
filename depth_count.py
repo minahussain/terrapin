@@ -1,10 +1,10 @@
-# Reads MDXI01 vcf file and tallies if all, only one, half,
-# or no reads support, or other.
+# Reads MDXI01 vcf file and saves tallies if all, only one, half,
+# or no reads support, or other, into depth_count txt file.
 
 import sys, string, glob
 
-hdr = open("MDXI01.vcf",'r')
-f1 = open("depth_count.txt",'w')
+hdr = open("MDXI01.vcf", 'r')
+f1 = open("depth_count.txt", 'w')
 
 hdr_dict = {}
 
@@ -27,8 +27,6 @@ for line in hdr.xreadlines():
 		# count up + and ^ chars in reads and compare to total
 		count = reads.count("+") + reads.count("^")
 
-		print("%d\t%d\n" %(total, count)) # print just for troubleshooting
-
 		# compare to total and add to its respective tally
 		if count == total:
 			full = full + 1
@@ -43,6 +41,5 @@ for line in hdr.xreadlines():
 
 print full, one, half, none, other
 f1.write("\n%d\t%d\t%d\t%d\t%d\n" %(full, one, half, none, other))
-
 
 f1.close()
