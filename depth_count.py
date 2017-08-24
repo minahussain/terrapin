@@ -1,6 +1,5 @@
 # Reads MDXI01 vcf file and tallies if all, only one, half,
 # or no reads support, or other.
-# 480,135,202 lines in MDXI01 vcf file
 
 import sys, string, glob
 
