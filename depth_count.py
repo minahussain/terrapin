@@ -9,11 +9,7 @@ f1 = open("depth_count.txt", 'w')
 hdr_dict = {}
 
 # all the counters for amount each line has reads supporting
-none = 0
-half = 0
-one = 0
-full = 0
-other = 0
+none, half, one, full, other = 0, 0, 0, 0 , 0
 
 # check vcf cols
 for line in hdr.xreadlines():
