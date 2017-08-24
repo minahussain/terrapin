@@ -1,2 +1,2 @@
 # terrapin
-scripts for terrapin genome project
+scripts working with vcf files for terrapin genome project
