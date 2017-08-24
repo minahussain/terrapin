@@ -1,5 +1,5 @@
-# Reads MDXI01 vcf file and saves tallies if all, only one, half,
-# or no reads support, or other, into depth_count txt file.
+# Reads lines in MDXI01 vcf file and saves tally if all, only one,
+# half, no reads support, or other, into depth_count txt file.
 
 import sys, string, glob
 
